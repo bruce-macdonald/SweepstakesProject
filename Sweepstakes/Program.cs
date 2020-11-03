@@ -11,7 +11,7 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             //choose stack or queue switch case
-            MarketingFirm marketingFirm = new MarketingFirm(new SweepstakesStackManager());
+            //MarketingFirm marketingFirm = new MarketingFirm(new SweepstakesStackManager());
         }
     }
 }

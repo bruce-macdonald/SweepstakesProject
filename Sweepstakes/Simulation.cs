@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Simulation
+    static class Simulation
     {
-        public void CreateMarketingFirmWithManager()
-        { 
-        
+        public static void CreateMarketingFirmWithManager()
+        {
+            //switch case - factory design pattern ===> pump em out, broh
+            SweepstakesFactory sweepstakesFactory = new SweepstakesFactory();
+            SweepstakesFactory.CreateSweepstakes();
         }
     }
 }

@@ -7,13 +7,18 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public static class UserInterface
+    static class UserInterface
     {
         public static string GetUserInputFor(string prompt)
         {
             Console.WriteLine(prompt);
             string input = Console.ReadLine();
             return input;
+        }
+
+        public static void ShowMessage(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }

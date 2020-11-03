@@ -13,6 +13,7 @@ namespace Sweepstakes
         private Dictionary<int, Contestant> contestants;
         private string name;
         public string Name { get; set; }
+        Random r = new Random();
 
         public Sweepstakes(string name)
         {
@@ -27,12 +28,14 @@ namespace Sweepstakes
 
         public Contestant PickWinner()
         {
-            return new Contestant();
+            int winningNumber = r.Next(1, contestants.Count);
+            return contestants[winningNumber];
         }
 
         public void PrintContestantInfo(Contestant contestant)
-        { 
-        
+        {
+            //print message(contestants.RegistrationNumber, Name)
+            UserInterface.ShowMessage($"{contestant.FirstName}, {contestant.LastName},{contestant.EmailAddress}, {contestant.RegistrationNumber} ");
         }
 
     }
